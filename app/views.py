@@ -1,10 +1,9 @@
 from app import app
 
-
-
-@app.route("/")
-def main():
-    return "hello"
+@app.route('/')
+@app.route('/index')
+def index():
+    return "Hello, World!"
 
 count = 0
 @app.route("/counter")
